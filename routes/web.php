@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OzonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/DeliveryVariants', [OzonController::class, 'DeliveryVariants']);
+Route::get('/DeliveryCityList', [OzonController::class, 'DeliveryCityList']);
+Route::get('/getVariantsByCity', [OzonController::class, 'getVariantsByCity']);
+Route::get('/getVariants', [OzonController::class, 'getVariants']);
